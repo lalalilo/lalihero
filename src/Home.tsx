@@ -1,37 +1,29 @@
 import React, { useState } from "react";
-import styled from 'styled-components'
+import styled from "styled-components";
 import { NoStyleButton } from "./Button";
 import { RouteComponentProps } from "react-router";
+import { Page } from "./Layout";
 
-export function HomePage(props:RouteComponentProps) {
-  
-  const [value, setValue] = useState("")
+export function HomePage(props: RouteComponentProps) {
+  const [value, setValue] = useState("");
 
-  return <Wrapper>
-    <Title>Entre ton nom</Title>
-    <SubmitWrapper>
-      <Input value={value} onChange={(event)=>setValue(event.target.value)}/>
-      <Submit
-        onClick={() => {
-          window.localStorage.setItem("studentName", value)
-          props.history.push("/introduction")
-        }}
-      >
-        C'EST PARTI !
-      </Submit>
-    </SubmitWrapper>
-    
-    </Wrapper>;
-
+  return (
+    <Page>
+      <Title>Entre ton nom</Title>
+      <SubmitWrapper>
+        <Input value={value} onChange={event => setValue(event.target.value)} />
+        <Submit
+          onClick={() => {
+            window.localStorage.setItem("studentName", value);
+            props.history.push("/introduction");
+          }}
+        >
+          C'EST PARTI !
+        </Submit>
+      </SubmitWrapper>
+    </Page>
+  );
 }
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-`
 
 const SubmitWrapper = styled.div`
   width: 500px;
@@ -44,9 +36,9 @@ const SubmitWrapper = styled.div`
 `;
 
 const Title = styled.h2`
-  color: #82B2FF;
+  color: #82b2ff;
   font-size: 50px;
-`
+`;
 
 const Input = styled.input`
   font-family: inherit;
