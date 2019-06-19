@@ -24,7 +24,7 @@ function AppRouter() {
           )}
         />
 
-        <Route
+        {/* <Route
           path="/page"
           render={props => (
             <StoryPage
@@ -33,6 +33,14 @@ function AppRouter() {
                 "{studentName}",
                 window.localStorage.getItem("studentName") || "Léon"
               )}
+            />
+          )}
+        /> */}
+        <Route
+          path="/page/:pageId"
+          render={props => (
+            <StoryPage
+              page={(story.pages as any)[props.match.params.pageId as any]}
             />
           )}
         />

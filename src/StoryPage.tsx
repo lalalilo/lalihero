@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Page } from "./Layout";
 import { Page1 } from "./story/page1";
 
-interface StoryPageProps {
-  text: string;
-}
-
-export const StoryPage: React.FC<StoryPageProps> = props => {
+export const StoryPage: React.FC<StoryPageProps> = ({ page, history }: any) => {
+  useEffect(() => {
+    for (const choice of page.choices) {
+      const element = document.querySelector(choice.element);
+      if (element) {
+        element.addEventListener(
+          "click",
+          history.push(`/page/${choice.pageLink}`)
+        );
+      }
+    }
+  });
   return (
     <Page>
       <Page1 />
-      <Content>{props.text}</Content>
+      <Content>
+        {page.content.replace(
+          "{studentName}",
+          window.localStorage.getItem("studentName") || "Léon"
+        )}
+      </Content>
     </Page>
   );
 };

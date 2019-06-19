@@ -15,7 +15,7 @@ export function HomePage(props: RouteComponentProps) {
         <Submit
           onClick={() => {
             window.localStorage.setItem("studentName", value);
-            props.history.push("/page");
+            props.history.push("/page/page1");
           }}
         >
           C'EST PARTI !
