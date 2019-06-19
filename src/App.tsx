@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { HomePage } from "./Home";
 import { StoryIntroduction } from "./StoryIntroduction";
+import story from "./story.json"
 
 function AppRouter() {
   return (
@@ -13,7 +14,7 @@ function AppRouter() {
           render={props => (
             <StoryIntroduction
               {...props}
-              text="This is the description of the story. Enjoy. This is the description of the story. Enjoy. This is the description of the story. Enjoy."
+              text={story.introduction.replace("{studentName}", window.localStorage.getItem("studentName") || "Léon")}
             />
           )}
         />
