@@ -2,31 +2,25 @@ import React from "react";
 import styled from "styled-components";
 import { NoStyleButton } from "./Button";
 import { Page } from "./Layout";
+import { RouteComponentProps } from "react-router";
 
-interface EndPageProps {
+interface EndPageProps extends RouteComponentProps {
   text: string;
-  image: string;
+  image: any;
 }
 
 export const EndPage: React.FC<EndPageProps> = props => {
   return (
     <Page>
-      <ContentWrapper>
-        <Content>{props.text}</Content>
-      </ContentWrapper>
-      <Wrapper>
-        <Button onClick={() => null}>Recommencer</Button>
-      </Wrapper>
+      <img src={props.image} />
+      <Content>{props.text}</Content>
+
+      <Button onClick={() => props.history.push("/introduction")}>
+        Recommencer
+      </Button>
     </Page>
   );
 };
-
-const ContentWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
 
 const Content = styled.text`
   position: absolute;
@@ -37,14 +31,6 @@ const Content = styled.text`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
 `;
 
 const Button = styled(NoStyleButton)`

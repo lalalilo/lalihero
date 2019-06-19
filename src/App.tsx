@@ -4,6 +4,7 @@ import { HomePage } from "./Home";
 import { StoryIntroduction } from "./StoryIntroduction";
 import story from "./story.json";
 import { EndPage } from "./EndPage";
+import backgroundImage from "./images/herisson-1.png";
 
 function AppRouter() {
   return (
@@ -22,7 +23,22 @@ function AppRouter() {
             />
           )}
         />
-        <Route path="/ending" exact component={EndPage} />
+        <Route
+          path="/sad-ending"
+          render={props => (
+            <EndPage
+              {...props}
+              text="le herison e mor"
+              image={backgroundImage}
+            />
+          )}
+        />
+        <Route
+          path="/happy-ending"
+          render={props => (
+            <EndPage {...props} text="le herison e vivan" image="bla" />
+          )}
+        />
 
         <Route component={HomePage} />
       </Switch>
