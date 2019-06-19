@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { NoStyleButton } from "./Button";
 import { Page } from "./Layout";
 import { RouteComponentProps } from "react-router";
+import { DeadHedgehog } from "./story/DeadHedgehog"
 
 interface EndPageProps extends RouteComponentProps {
   text: string;
@@ -12,6 +13,7 @@ interface EndPageProps extends RouteComponentProps {
 export const EndPage: React.FC<EndPageProps> = props => {
   return (
     <Page>
+      <DeadHedgehog />
       <Content>{props.text}</Content>
       <Button onClick={() => props.history.push("/introduction")}>
         Recommencer

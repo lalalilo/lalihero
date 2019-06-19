@@ -23,19 +23,6 @@ function AppRouter() {
             <EndPage {...props} text="le herison e vivan" image={hedgehog} />
           )}
         />
-
-        {/* <Route
-          path="/page"
-          render={props => (
-            <StoryPage
-              {...props}
-              text={story.pages.page1.content.replace(
-                "{studentName}",
-                window.localStorage.getItem("studentName") || "Léon"
-              )}
-            />
-          )}
-        /> */}
         <Route
           path="/page/:pageId"
           render={props => (
