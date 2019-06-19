@@ -10,7 +10,7 @@ export const Page = styled.div`
   position: relative;
 `;
 
-const Content = styled.div`
+export const Content = styled.div`
   position: absolute;
   bottom: 0;
   background: white;
