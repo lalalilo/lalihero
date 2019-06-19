@@ -41,6 +41,7 @@ function AppRouter() {
           render={props => (
             <StoryPage
               page={(story.pages as any)[props.match.params.pageId as any]}
+              {...props}
             />
           )}
         />

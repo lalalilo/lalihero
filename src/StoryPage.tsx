@@ -3,13 +3,15 @@ import styled from "styled-components";
 import { Page } from "./Layout";
 import { Page1 } from "./story/page1";
 
-export const StoryPage: React.FC<StoryPageProps> = ({ page, history }: any) => {
+export const StoryPage: React.FC<any> = ({ page, history }: any) => {
   useEffect(() => {
+    if (!page.choices) {
+      return;
+    }
     for (const choice of page.choices) {
       const element = document.querySelector(choice.element);
       if (element) {
-        element.addEventListener(
-          "click",
+        element.addEventListener("click", () =>
           history.push(`/page/${choice.pageLink}`)
         );
       }
