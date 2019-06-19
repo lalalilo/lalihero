@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled from 'styled-components'
 import { NoStyleButton } from "./Button";
+import { RouteComponentProps } from "react-router";
 
-export function HomePage() {
+export function HomePage(props:RouteComponentProps) {
   
   const [value, setValue] = useState("")
 
@@ -11,7 +12,10 @@ export function HomePage() {
     <SubmitWrapper>
       <Input value={value} onChange={(event)=>setValue(event.target.value)}/>
       <Submit
-        onClick={() => null}
+        onClick={() => {
+          window.localStorage.setItem("studentName", value)
+          props.history.push("/introduction")
+        }}
       >
         C'EST PARTI !
       </Submit>
@@ -29,7 +33,7 @@ const Wrapper = styled.div`
   height: 100%;
 `
 
-const SubmitWrapper = styled.form`
+const SubmitWrapper = styled.div`
   width: 500px;
   height: 40px;
   display: flex;
