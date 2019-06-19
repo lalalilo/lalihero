@@ -1,5 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
+import styled from 'styled-components'
+import { NoStyleButton } from "./Button";
 
 export function HomePage() {
-  return <h2>Home</h2>;
+  
+  const [value, setValue] = useState("")
+
+  return <Wrapper>
+    <Title>Entre ton nom</Title>
+    <SubmitWrapper>
+      <Input value={value} onChange={(event)=>setValue(event.target.value)}/>
+      <Submit
+        onClick={() => null}
+      >
+        C'EST PARTI !
+      </Submit>
+    </SubmitWrapper>
+    
+    </Wrapper>;
+
 }
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+`
+
+const SubmitWrapper = styled.form`
+  width: 500px;
+  height: 40px;
+  display: flex;
+  margin: 20px;
+  box-shadow: 0 2px 20px 0 rgba(98, 98, 98, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+`;
+
+const Title = styled.h2`
+  color: #82B2FF;
+  font-size: 50px;
+`
+
+const Input = styled.input`
+  font-family: inherit;
+  flex-grow: 1;
+  font-size: 16px;
+  opacity: 0.8;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  &::placeholder {
+    text-align: center;
+  }
+`;
+
+const Submit = styled(NoStyleButton)`
+  font-family: inherit;
+  flex-grow: 1;
+  white-space: nowrap;
+  color: white;
+  background-color: #78a5f0;
+  &:disabled {
+    background-color: #d7e2e9;
+  }
+`;
