@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import backgroundImage from "./story/herisson-1.png";
-import Page from "./story/page1.svg"
+import { Page, Content } from "./Layout"
+import {Page1} from "./story/page1"
+
 
 interface StoryPageProps {
   text: string;
@@ -9,31 +10,11 @@ interface StoryPageProps {
 
 export const StoryPage: React.FC<StoryPageProps> = props => {
   return (
-    <Wrapper>
+    <Page>
+      <Page1 />
       <Content>{props.text}</Content>
-    </Wrapper>
+    </Page>
   );
 };
 
-const Content = styled.div`
-  position: absolute;
-  bottom: 0;
-  background: white;
-  font-size: 40px;
-  max-width: 80%;
-  padding: 1em 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
 
-const Wrapper = styled.section`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-`;

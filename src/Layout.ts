@@ -9,3 +9,16 @@ export const Page = styled.div`
   align-items: center;
   position: relative;
 `;
+
+const Content = styled.div`
+  position: absolute;
+  bottom: 0;
+  background: white;
+  font-size: 40px;
+  max-width: 80%;
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
