@@ -1,54 +1,53 @@
 {
-"firstPage": "page1",
-    "pages": {
-        "page1": {
-            "content": "Il était une fois un hérisson, appelé {studentName}, qui vivait à la campagne avec sa famille. Un jour il décida de voyager. Quand il voulut revenir chez lui, une route qui venait d'être construite lui barrait le chemin. Qu'allait-il faire ?",
-            "template": "choices",
-            "choices": [
-                {
-                    "element": "#road",
-                    "pageLink": "page2"
-                },
-                {
-                    "element": "#trail",
-                    "pageLink":"page3"
-                }
-            ]
+  "firstPage": "page1",
+  "pages": {
+    "page1": {
+      "content": "Il était une fois un hérisson, appelé {studentName}, qui vivait à la campagne avec sa famille. Un jour il décida de voyager. Quand il voulut revenir chez lui, une route qui venait d'être construite lui barrait le chemin. Qu'allait-il faire ?",
+      "template": "choices",
+      "choices": [
+        {
+          "element": "#road",
+          "pageLink": "page2"
         },
-        "page2": {
-            "content": "Il regarda à droite, à gauche et s'élança. Mais une moto qui arrivait à vive allure l'écrasa. Pauvre hérisson.",
-            "template": "sad-ending"
-        },
-        "page3": {
-            "content": "Il partit alors dans la direction opposée car il ne voulait pas traverser cette route. C'était trop dangereux. Il marcha longtemps et arriva devant un mur. Il était encore bloqué mais trois animaux étaient là. Ils étaient prêts à l'aider.",
-            "template": "choices",
-            "choices": [
-                {
-                    "element": "#turtle",
-                    "pageLink": "page4"
-                },
-                {
-                    "element": "#mole",
-                    "pageLink":"page5"
-                },
-                {
-                    "element": "#eagle",
-                    "pageLink": "page6"
-                }
-            ]
-        },
-        "page4": {
-            "content": "Il demanda poliment à la tortue. - Oh gentille tortue pourras-tu m'aider à aller de l'autre côté du mur ? Je suis loin de ma maisosn  et de ma famille.  La tortue lui répondit : J'aimerais bien t'aider gentil hérisson mais hélas je ne peux pas.  Alors le hérisson tout triste resta bloqué  au pied de ce mur infranchisssable. ",
-            "template": "sad-ending"
-        },
-        "page5": {
-            "content": "Il demanda poliment à la taupe- Oh gentille taupe pourrais-tu m'aider à aller de l'autre côté du mur ? Je suis loin de ma maison et de ma famille. La taupe commença à creuser un trou en-dessous du mur. Le hérisson passa par le trou et ressortit de l'autre côté du mur. Il est sauvé !",
-            "template": "happy-ending"
-        },
-        "page6": {
-            "content": "Il demanda poliment à l'aigle- Oh gentil aigle pourrais-tu m'aider à aller de l'autre côté du mur ? Je suis loin de ma maisosn  et de ma famille. L'aigle prit le hérisson dans ses pattes et le souleva jusqu'à l'autre côté du mur. Le hérisson reprit sa route et arriva devant un grand désert. Il est sauvé !",
-            "template": "happy-ending"
+        {
+          "element": "#trail",
+          "pageLink": "page3"
         }
-
+      ]
+    },
+    "page2": {
+      "content": "Il regarda à droite, à gauche et s'élança. Mais une moto qui arrivait à vive allure l'écrasa. Pauvre hérisson.",
+      "template": "sad-ending"
+    },
+    "page3": {
+      "content": "Il partit alors dans la direction opposée car il ne voulait pas traverser cette route. C'était trop dangereux. Il marcha longtemps et arriva devant un mur. Il était encore bloqué mais trois animaux étaient là. Ils étaient prêts à l'aider.",
+      "template": "choices",
+      "choices": [
+        {
+          "element": "#turtle",
+          "pageLink": "page4"
+        },
+        {
+          "element": "#mole",
+          "pageLink": "page5"
+        },
+        {
+          "element": "#eagle",
+          "pageLink": "page6"
+        }
+      ]
+    },
+    "page4": {
+      "content": "Il demanda poliment à la tortue. - Oh gentille tortue pourras-tu m'aider à aller de l'autre côté du mur ? Je suis loin de ma maisosn  et de ma famille.  La tortue lui répondit : J'aimerais bien t'aider gentil hérisson mais hélas je ne peux pas.  Alors le hérisson tout triste resta bloqué  au pied de ce mur infranchisssable. ",
+      "template": "sad-ending"
+    },
+    "page5": {
+      "content": "Il demanda poliment à la taupe- Oh gentille taupe pourrais-tu m'aider à aller de l'autre côté du mur ? Je suis loin de ma maison et de ma famille. La taupe commença à creuser un trou en-dessous du mur. Le hérisson passa par le trou et ressortit de l'autre côté du mur. Il est sauvé !",
+      "template": "happy-ending"
+    },
+    "page6": {
+      "content": "Il demanda poliment à l'aigle- Oh gentil aigle pourrais-tu m'aider à aller de l'autre côté du mur ? Je suis loin de ma maisosn  et de ma famille. L'aigle prit le hérisson dans ses pattes et le souleva jusqu'à l'autre côté du mur. Le hérisson reprit sa route et arriva devant un grand désert. Il est sauvé !",
+      "template": "happy-ending"
     }
+  }
 }
