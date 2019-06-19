@@ -13,7 +13,7 @@ function AppRouter() {
           render={props => (
             <StoryIntroduction
               {...props}
-              text="This is the description of the story. Enjoy."
+              text="This is the description of the story. Enjoy. This is the description of the story. Enjoy. This is the description of the story. Enjoy."
             />
           )}
         />
