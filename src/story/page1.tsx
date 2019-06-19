@@ -1,3 +1,5 @@
+import React from "react";
+
 export const Page1 = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
     <title>Plan de travail 1</title>
