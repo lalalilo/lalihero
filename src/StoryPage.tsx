@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { Page, Content } from "./Layout"
 import {Page1} from "./story/page1"
 

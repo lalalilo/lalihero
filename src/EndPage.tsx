@@ -12,7 +12,7 @@ interface EndPageProps extends RouteComponentProps {
 export const EndPage: React.FC<EndPageProps> = props => {
   return (
     <Page>
-      <img src={props.image} />
+      <img src={props.image} alt="" />
       <Content>{props.text}</Content>
 
       <Button onClick={() => props.history.push("/introduction")}>
