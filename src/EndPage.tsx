@@ -12,11 +12,11 @@ interface EndPageProps extends RouteComponentProps {
 export const EndPage: React.FC<EndPageProps> = props => {
   return (
     <Page>
-      <EndImage src={props.image} />
       <Content>{props.text}</Content>
       <Button onClick={() => props.history.push("/introduction")}>
         Recommencer
       </Button>
+      <EndImage src={props.image} />
     </Page>
   );
 };
@@ -33,7 +33,6 @@ const Content = styled.text`
 `;
 
 const EndImage = styled.img`
-  margin-top: 20px;
   width: 20%;
 `;
 

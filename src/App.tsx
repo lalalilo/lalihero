@@ -39,11 +39,7 @@ function AppRouter() {
 
         <Route
           path="/page"
-          component={StoryPage}
-          text={story.page.replace(
-            "{studentName}",
-            window.localStorage.getItem("studentName") || "Léon"
-          )}
+          render={props => <StoryPage {...props} text="le herison e vivan" />}
         />
         <Route path="/ending" exact component={EndPage} />
         <Route component={HomePage} />
