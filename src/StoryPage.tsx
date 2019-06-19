@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import backgroundImage from "./story/herisson-1.png";
-import { Page } from "./Layout";
+import Page from "./story/page1.svg"
 
-interface StoryIntroductionProps {
+interface StoryPageProps {
   text: string;
 }
 
-export const StoryIntroduction: React.FC<StoryIntroductionProps> = props => {
+export const StoryPage: React.FC<StoryPageProps> = props => {
   return (
     <Wrapper>
       <Content>{props.text}</Content>
@@ -28,7 +28,12 @@ const Content = styled.div`
   align-items: center;
 `;
 
-const Wrapper = styled(Page)`
-  background-image: url(${backgroundImage});
-  background-size: cover;
+const Wrapper = styled.section`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 `;

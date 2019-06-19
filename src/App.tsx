@@ -2,8 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { HomePage } from "./Home";
 import { StoryIntroduction } from "./StoryIntroduction";
-import story from "./story.json";
+import story from "./story/index.json";
 import { EndPage } from "./EndPage";
+import { StoryPage } from "./StoryPage";
+
 
 function AppRouter() {
   return (
@@ -22,8 +24,16 @@ function AppRouter() {
             />
           )}
         />
+        <Route
+          path="/page"
+          render={props => (
+            <StoryPage
+              {...props}
+              text={story.page.replace("{studentName}", window.localStorage.getItem("studentName") || "Léon")}
+            />
+          )}
+        />
         <Route path="/ending" exact component={EndPage} />
-
         <Route component={HomePage} />
       </Switch>
     </Router>
