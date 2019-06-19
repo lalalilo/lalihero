@@ -4,7 +4,7 @@ import { HomePage } from "./Home";
 import { StoryIntroduction } from "./StoryIntroduction";
 import story from "./story/index.json";
 import { EndPage } from "./EndPage";
-import backgroundImage from "./story/herisson-1.png";
+import hedgehog from "./story/hedgehog.svg";
 import { StoryPage } from "./StoryPage";
 
 function AppRouter() {
@@ -26,16 +26,17 @@ function AppRouter() {
         />
         <Route
           path="/sad-ending"
-          component={EndPage}
-          text="le herison e mor"
-          image={backgroundImage}
+          render={props => (
+            <EndPage {...props} text="le herison e mor dsl" image={hedgehog} />
+          )}
         />
         <Route
           path="/happy-ending"
-          component={EndPage}
-          text="le herison e vivan"
-          image="bla"
+          render={props => (
+            <EndPage {...props} text="le herison e vivan" image={hedgehog} />
+          )}
         />
+
         <Route
           path="/page"
           component={StoryPage}
