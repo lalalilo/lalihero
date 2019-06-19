@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import BackgroundImage from "./images/herisson-1.png";
+import backgroundImage from "./images/herisson-1.png";
 
 interface StoryIntroductionProps {
   text: string;
@@ -8,26 +8,14 @@ interface StoryIntroductionProps {
 
 export const StoryIntroduction: React.FC<StoryIntroductionProps> = props => {
   return (
-    <div>
-      <Background src={BackgroundImage} />
-      <Wrapper>
-        <Content>{props.text}</Content>
-      </Wrapper>
-    </div>
+    <Wrapper>
+      <Content>{props.text}</Content>
+    </Wrapper>
   );
 };
 
-const Background = styled.img`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  object-fit: cover;
-`;
 
-const Content = styled.text`
+const Content = styled.div`
   position: absolute;
   bottom: 0;
   background: white;
@@ -46,4 +34,6 @@ const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
+  background-image: url(${backgroundImage});
+  background-size: cover;
 `;
